@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * 151120
  * ReversePolishNotation
  * 逆ポーランド記法による数式の計算
  **/

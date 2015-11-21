@@ -16,7 +16,7 @@ public class RPNTestDriver {
 
 //        String ori = "( 10 + 20 ) * 30 + 35 / 40";
 //        String ori = "2.1 * ( 24 + 20 ) + 2 / 97";
-        String ori = "1.4 * 2";
+        String ori = "33 * -4";
 
         System.out.println(RPN.calc(new ArrayList<>(Arrays.asList(ori.split(" ")))));
 
