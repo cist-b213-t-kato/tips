@@ -3,17 +3,29 @@ package blackjack;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class BlackJackActor{
+class BlackJackActor{
     protected List<Integer> cards = new ArrayList<>();
-    abstract String getName();
 
-    public BlackJackActor(){
-    	//まずは2枚引く というルール
+	private String name;
+	private boolean visible = true;
+
+    public String getName(){
+    	return name;
+    }
+
+    public BlackJackActor(String name){
+    	this.name = name;
+    	//ゲーム開始時にそれぞれのプレイヤーは
+    	//２枚のカードを引く
         hits();
         hits();
     }
 
-    public void shows(boolean visible){
+    public void setVisible(boolean visible){
+    	this.visible = visible;
+    }
+
+    public void shows(){
         System.out.print(getName() + ": ");
         String card = "";
         for(int i=0; i<cards.size(); i++){
@@ -38,10 +50,6 @@ abstract class BlackJackActor{
         }else{
             System.out.println();
         }
-    }
-
-    public void shows(){
-        shows(true);
     }
 
     public void hits(){
