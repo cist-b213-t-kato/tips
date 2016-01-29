@@ -1,4 +1,4 @@
-package pattern;
+package observerpattern;
 
 public class App {
 	public static void main(String[] args){

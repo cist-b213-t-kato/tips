@@ -1,4 +1,4 @@
-package pattern;
+package observerpattern;
 
 public class Subject {
 
