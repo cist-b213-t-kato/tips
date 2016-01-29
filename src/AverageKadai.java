@@ -1,9 +1,10 @@
 
-public class Kadai {
+public class AverageKadai {
 	public static void main(String[] args){
 		double[] a = new double[]{3.0,2.0,1.0,2.0,1.0};
 
-
+		double ave = calcAverage(a);
+		System.out.println(ave);
 
 	}
 
@@ -13,8 +14,7 @@ public class Kadai {
 			returning += r;
 		}
 
-		return returning;
+		return returning/n.length;
 	}
-
 
 }
