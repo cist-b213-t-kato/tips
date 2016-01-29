@@ -1,0 +1,12 @@
+package pattern;
+
+abstract class AbstractMessage {
+
+	public void showMessage(){
+		System.out.println("-------------------");
+		message();
+		System.out.println("-------------------");
+	}
+
+	abstract protected void message();
+}
