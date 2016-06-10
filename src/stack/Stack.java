@@ -3,18 +3,23 @@ package stack;
 public class Stack <T> {
     
     public static void main(String[] args){
-        Stack<Double> stack = new Stack<Double>(5);
-        stack.push(10.0);
-        stack.push(20.0);
-        stack.push(30.0);
-        stack.push(40.0);
-        
-        while(!stack.isEmpty()){
-            Double value = stack.pop();
-            System.out.print(value);
-            System.out.print(" ");
-        }
-        System.out.println();
+//        Stack<Double> stack = new Stack<Double>(5);
+//        stack.push(10.0);
+//        stack.push(20.0);
+//        stack.push(30.0);
+//        stack.push(40.0);
+//        
+//        while(!stack.isEmpty()){
+//            Double value = stack.pop();
+//            System.out.print(value);
+//            System.out.print(" ");
+//        }
+//        System.out.println();
+    	
+    	Stack<String> stack = new Stack<>(10);
+
+    	stack.push("+");
+    	stack.push("/");
         
     }
     

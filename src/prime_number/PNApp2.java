@@ -46,12 +46,12 @@ public class PNApp2 {
 
 	public static boolean isPN(int i){
             
-            for(int j=2; j<=i/2; ++j){
-                if(i%j==0){
-                    return false;
-                }
+        for(int j=2; j<=i/2; ++j){
+            if(i%j==0){
+                return false;
             }
-            return i<2?false:true;
+        }
+        return i>=2;
             
 	}
 }

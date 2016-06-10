@@ -1,11 +1,14 @@
 package sort;
 
-public class InsertionSort {
+public class InsertionSort implements IntegerSort {
 
     public static void main(String[] args) {
 
         int[] as = {8, 4, 3, 7, 6, 2, 5, 1};
-        method(as);
+        
+        IntegerSort sort = new InsertionSort();
+        
+        sort.sort(as);
 
         for (int i : as) {
             System.out.print(i + " ");
@@ -14,21 +17,21 @@ public class InsertionSort {
 
     }
 
-    public static void method(int as[]) {
-        for (int i = 1; i < as.length; ++i) {
+    public void sort(int as[]) {
+        for (int i = 1; i < as.length; i++) {
             if (as[i] < as[i-1]) {
                 int tmp = as[i];
                 int j = i;
                 do {
                     as[j] = as[j-1];
                     j--;
-                } while (j > 0 && tmp < as[j - 1]);
+                } while (j != 0 && tmp < as[j - 1]);
                 as[j] = tmp;
             }
         }
     }
 
-    /*無駄なコード*/
+    /*冗長なコード*/
     public static void method1(int as[]) {
         int tmp = 0;
         int i, j, k;

@@ -1,4 +1,4 @@
-package pattern;
+package hookpattern;
 
 abstract class AbstractMessage {
 

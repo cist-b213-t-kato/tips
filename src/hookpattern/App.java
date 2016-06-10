@@ -1,4 +1,4 @@
-package pattern;
+package hookpattern;
 
 public class App {
 	public static void main(String[] args){
@@ -25,7 +25,7 @@ public class App {
 			@Override
 			protected void message() {
 				System.out.println("とまあ、このようにすることで、サブクラスのメソッドの処理の前後に");
-				System.out.println("任意の処理が常にはさみ込まれるように強制できる。");
+				System.out.println("スーパークラスの処理をすることを強制できる。");
 				System.out.println("これはメッセージフック(？)とか呼ばれる手法だったと思う。");
 			}
 		};

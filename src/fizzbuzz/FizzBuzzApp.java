@@ -8,7 +8,7 @@ public class FizzBuzzApp {
 
 	public static void type1(){
 		for (int i = 1; i <= 30; i++) {
-			if (i % 3 == 0 && i % 5 == 0) {
+			if (i % 15 == 0) {
 				System.out.println("FizzBuzz");
 			} else if (i % 3 == 0) {
 				System.out.println("Fizz");

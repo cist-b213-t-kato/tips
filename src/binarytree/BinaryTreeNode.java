@@ -8,8 +8,7 @@ public class BinaryTreeNode <T> {
     private BinaryTreeNode left;
     private BinaryTreeNode right;
 
-    public BinaryTreeNode(){
-    }
+    public BinaryTreeNode(){}
     
     public BinaryTreeNode(T v){
         setValue(v);

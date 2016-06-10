@@ -1,4 +1,4 @@
-package exception_test;
+package trycatch;
 
 //finallyくんの存在意義
 public class ExceptionApp {
