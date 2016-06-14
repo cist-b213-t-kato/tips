@@ -2,6 +2,7 @@ package lambda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class SearchApp {
 	public static void main(String[] args) {
@@ -10,14 +11,12 @@ public class SearchApp {
 
 		list.add(2);
 		list.add(13);
+		list.add(27);
 		list.add(4);
 		
-		boolean b = list.stream().filter(o->o>=10).findFirst().isPresent();
-		if(b){
-			System.out.println("10以上ありますねえ！");
-		}else{
-			System.out.println("10以上ないです。");
-		}
+		Optional<Integer> opt = list.stream().parallel().filter(o->o>=10).findFirst();
+		
+		opt.ifPresent(o->System.out.println(o));
 		
 	}
 }

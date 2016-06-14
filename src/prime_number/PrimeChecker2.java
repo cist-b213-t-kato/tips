@@ -1,5 +1,7 @@
 package prime_number;
 
+import java.util.stream.Stream;
+
 import utils.Stopwatch;
 
 public class PrimeChecker2 {
@@ -7,41 +9,34 @@ public class PrimeChecker2 {
 	public static void main(String[] args) {
 		
 		Stopwatch.stopwatch(()->{
-//			System.out.println(2);
-//			System.out.println(3);
-//			for(int i=1; i<100000/6; ++i){
-//				if(f(6*i-1)){
-//					System.out.println(6*i-1);
-//				}
-//				if(f(6*i+1)){
-//					System.out.println(6*i+1);
-//				}
-//			}
 			enumeratePN();
 		});
 		
 	}
 	
 	public static void enumeratePN(){
-		System.out.print(2+" "+3+" ");
-		for (int i = 1; 6*i-1 < 10000000; ++i) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("2 3 ");
+		Stream.iterate(1, i->i+1).limit(100000000/6).parallel().forEachOrdered(i->{
 			if (PrimeChecker2.mainRoutine(6*i-1)) {
-				System.out.print(6*i-1 + " ");
+				sb.append(6*i-1);
+				sb.append(" ");
 			}
 			if (PrimeChecker2.mainRoutine(6*i+1)) {
-				System.out.print(6*i+1 + " ");
+				sb.append(6*i+1);
+				sb.append(" ");
 			}
-			if(i%20==0){
-				System.out.println();
+			if(i%10==0){
+				sb.append("\n");
 			}
-		}
-		System.out.println();
+		});
+		System.out.println(sb.toString());
 	}
 	
 	private static boolean mainRoutine(int number){
 		for (int i=1;; ++i) {
 			if (6 * i - 1 > Math.sqrt(number)) {
-				return number != 1;
+				return true;
 			}
 			if (number % (6 * i + 1) == 0 || number % (6 * i - 1) == 0) {
 				return false;
@@ -49,14 +44,14 @@ public class PrimeChecker2 {
 		}
 	}
 	
-	public static boolean isPN1(int number) {
+	public static boolean isPN(int number) {
 		if(number == 2 || number == 3) {
 			return true;
 		}
 		if(number % 6 != 1 && number % 6 != 5){
 			return false;
 		}
-		return mainRoutine(number);
+		return mainRoutine(number) && number!=1;
 	}
 	
 	public static boolean f(int n){
