@@ -1,4 +1,4 @@
-package binarytree.manual;
+package binarytree.manually;
 
 public class ManuallyAppendApp {
 	public static void main(String[] args) {

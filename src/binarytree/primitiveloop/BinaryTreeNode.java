@@ -1,4 +1,4 @@
-package binarytree.manual;
+package binarytree.primitiveloop;
 
 public class BinaryTreeNode {
 	private int data;
