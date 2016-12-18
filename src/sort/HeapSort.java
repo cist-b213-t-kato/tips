@@ -2,9 +2,6 @@ package sort;
 
 public class HeapSort {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         // ２分木
         //                           10(0)
@@ -18,31 +15,13 @@ public class HeapSort {
 //        int n = 15;
 //        int[] heapTree = new int[n];
 //        System.out.println("要素数：" + n);
-//
-//        heapTree[0] = 10;
-//        heapTree[1] = 6;
-//        heapTree[2] = 18;
-//        heapTree[3] = 3;
-//        heapTree[4] = 8;
-//        heapTree[5] = 15;
-//        heapTree[6] = 20;
-//        heapTree[7] = 1;
-//        heapTree[8] = 5;
-//        heapTree[9] = 36;
-//        heapTree[10] = 22;
-//        heapTree[11] = 19;
-//        heapTree[12] = 120;
-//        heapTree[13] = 117;
-//        heapTree[14] = 29;
         
-        int[] heapTree = { 10, 6, 18, 3, 8, 15, 20, 1 };
+        int[] heapTree = { 
+        		10, 6, 18, 3, 8, 15, 20, 1,
+        		5, 36, 22, 19, 120, 117, 29};
 
-//        print(heapTree);
-//        sort(heapTree);
-//        print(heapTree);
         
         print(heapTree);
-//        heap(heapTree, 10);
         sort(heapTree);
         print(heapTree);
         
