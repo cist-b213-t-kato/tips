@@ -7,6 +7,8 @@ public class Coach {
 		this.coachName = coachName;
 	}
 	
+	Coach(){}
+	
 	public void printName(){
 		System.out.println("コーチは " + coachName + " です");
 	}
