@@ -1,4 +1,4 @@
-package bus;
+package bus2;
 
 public class BusStopTime {
 	public final long busStopTimeId;

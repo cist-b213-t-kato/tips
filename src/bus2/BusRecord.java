@@ -1,4 +1,4 @@
-package bus;
+package bus2;
 
 public class BusRecord {
 	public final long busRecordId;
