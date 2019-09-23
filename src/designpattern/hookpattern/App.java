@@ -2,7 +2,7 @@ package designpattern.hookpattern;
 
 public class App {
 	public static void main(String[] args){
-		AbstractMessage message = new AbstractMessage(){
+		Message message = new Message(){
 			@Override
 			protected void message() {
 				System.out.println("よく来たな 光の勇者よ！");
@@ -12,7 +12,7 @@ public class App {
 		};
 		message.showMessage();
 		
-		AbstractMessage message2 = new AbstractMessage(){
+		Message message2 = new Message(){
 			@Override
 			protected void message() {
 				System.out.println("おお！勇者よ");
@@ -21,7 +21,7 @@ public class App {
 		};
 		message2.showMessage();
 		
-		AbstractMessage message3 = new AbstractMessage(){
+		Message message3 = new Message(){
 			@Override
 			protected void message() {
 				System.out.println("とまあ、このようにすることで、サブクラスのメソッドの処理の前後に");

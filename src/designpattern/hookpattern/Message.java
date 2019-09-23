@@ -1,6 +1,6 @@
 package designpattern.hookpattern;
 
-abstract class AbstractMessage {
+abstract class Message {
 
 	public void showMessage(){
 		System.out.println("---------------------------------------");
